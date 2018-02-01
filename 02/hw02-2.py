@@ -11,7 +11,7 @@ parser.add_argument('image', required=True, type=FileStorage, location='files')
 
 class Image(Resource):
 	def get(self):
-		return {"message":"Plese sent 'image'."}
+		return {"message":"Plese send 'image'."}
 	def post(self):
 		args = parser.parse_args()
 		image = args['image']
