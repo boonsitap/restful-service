@@ -24,7 +24,7 @@ class Age(Resource):
 		birthdate = args['birthdate']
 		datetime_object = datetime.strptime(birthdate, '%d-%m-%Y')
 		age = int(calAge(datetime_object))
-		return {"birthdate":datetime_object.strftime('%m-%d-%Y'),"Age":age}
+		return {"birthdate":datetime_object.strftime('%d-%m-%Y'),"Age":age}
 
 api.add_resource(Age,'/dob')
 
